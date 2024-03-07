@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "powerpoint-remote"
+version = "0.1.0"
+description = "A very basic tool to remote control a powerpoint presentation by sending keyboard shortcuts"
+authors = ["Kaj Siebert <kaj@k-si.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "powerpoint_remote"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^3.0.2"
+PyAutoGUI = "^0.9.54"
+qrcode = "^7.4.2"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+powerpoint-remote = "powerpoint_remote.cli:runserver"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
